@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 85vw;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.header_container{
+    margin: 2.8rem;
+}
+.header_title{
+    margin: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+.header_desc{
+    max-width: 568px;
+    text-align: center;
+    color: rgb(105, 99, 99);
+    margin: 0 auto;
+}
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    justify-content: center;
+}
+/* @media (min-width: 730px){
+    .main_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1088px){
+    .main_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1470px){
+    .main_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(85, 82, 82, 0.442);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px black;
+}
+.card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+}
+@media (min-width:730){
+    .card_image-container{
+        height: 16rem;
+    }
+}
+.card_image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card_title_anchor{
+    text-decoration: none;
+}
+.card_title_container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.card_container:hover .card_image{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: rgba(49, 39, 39, 0.801);
+}
+.card_title_anchor:hover .card_title{
+    color: blue;
+}
+.card_desc{
+    color: rgb(73, 64, 64);
+    font-size: 1rem;
+}
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+}
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.author_avatar{
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid rgb(72, 65, 65);
+    background-color: rgb(242, 238, 238);
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}   
+.author_name{
+    color: rgb(64, 64, 150);
+}
+.author_date{
+    color: rgb(100, 92, 92);
+}
+.card_tag_container{
+    font-size: 0.8rem;
+    border: 1px solid rgb(55, 49, 49);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+    color: grey;
+}
